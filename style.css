@@ -5,124 +5,230 @@
   box-sizing:border-box;
 }
 
+html{
+  scroll-behavior:smooth;
+}
+
 body{
-  font-family:Arial, sans-serif;
+  font-family:Arial,sans-serif;
   background:#111;
   color:white;
 }
 
 header{
+  position:fixed;
+  width:100%;
+  top:0;
   display:flex;
   justify-content:space-between;
   align-items:center;
   padding:20px 60px;
-  background:black;
-  position:sticky;
-  top:0;
+  background:rgba(0,0,0,0.85);
+  z-index:1000;
 }
 
 .logo{
+  color:gold;
   font-size:24px;
   font-weight:bold;
-  color:gold;
 }
 
 nav a{
   color:white;
-  margin-left:20px;
+  margin-left:25px;
   text-decoration:none;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:gold;
 }
 
 .hero{
-  height:90vh;
+  height:100vh;
   background:url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
   display:flex;
-  align-items:center;
   justify-content:center;
+  align-items:center;
   text-align:center;
 }
 
-.hero-content{
+.overlay{
   background:rgba(0,0,0,0.6);
-  padding:40px;
-  border-radius:12px;
+  padding:50px;
+  border-radius:16px;
 }
 
 .hero h1{
-  font-size:56px;
+  font-size:60px;
   margin-bottom:20px;
 }
 
 .hero p{
-  margin-bottom:20px;
   font-size:20px;
+  margin-bottom:30px;
 }
 
 .btn{
   background:gold;
   color:black;
-  padding:12px 24px;
   text-decoration:none;
-  border-radius:8px;
+  padding:14px 30px;
+  border-radius:10px;
   font-weight:bold;
 }
 
 .products{
-  padding:80px 40px;
-  text-align:center;
+  padding:100px 40px;
 }
 
-.products h2{
+.products h2,
+.about h2,
+.reviews h2,
+.newsletter h2,
+.contact h2{
+  text-align:center;
   margin-bottom:40px;
-  font-size:40px;
+  font-size:42px;
 }
 
 .product-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:30px;
 }
 
 .card{
   background:#1b1b1b;
   padding:20px;
-  border-radius:12px;
+  border-radius:16px;
+  text-align:center;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
 }
 
 .card img{
   width:100%;
-  border-radius:12px;
-  height:300px;
+  height:320px;
   object-fit:cover;
+  border-radius:12px;
 }
 
 .card h3{
-  margin-top:15px;
+  margin-top:20px;
 }
 
 .card p{
-  margin:10px 0;
+  margin:15px 0;
   color:gold;
+  font-size:20px;
 }
 
 .card button{
-  padding:10px 20px;
+  padding:12px 25px;
   border:none;
+  border-radius:10px;
   background:gold;
   color:black;
-  border-radius:8px;
   cursor:pointer;
   font-weight:bold;
 }
 
-.about, .contact{
-  padding:80px 40px;
+.about,
+.reviews,
+.newsletter,
+.contact{
+  padding:100px 40px;
   text-align:center;
+}
+
+.about p,
+.newsletter p{
+  max-width:700px;
+  margin:auto;
+  line-height:1.7;
+}
+
+.review-box{
+  background:#1c1c1c;
+  padding:30px;
+  border-radius:12px;
+  margin:20px auto;
+  max-width:700px;
+}
+
+.review-box span{
+  display:block;
+  margin-top:15px;
+  color:gold;
+}
+
+form{
+  margin-top:30px;
+}
+
+input{
+  padding:14px;
+  width:300px;
+  border:none;
+  border-radius:8px;
+}
+
+form button{
+  padding:14px 25px;
+  border:none;
+  background:gold;
+  color:black;
+  border-radius:8px;
+  margin-left:10px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.contact-box{
+  line-height:2;
 }
 
 footer{
   background:black;
-  padding:20px;
+  padding:30px;
   text-align:center;
   color:#aaa;
+}
+
+@media(max-width:768px){
+
+  header{
+    flex-direction:column;
+    padding:20px;
+  }
+
+  nav{
+    margin-top:15px;
+  }
+
+  nav a{
+    margin:0 10px;
+  }
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .overlay{
+    margin:20px;
+  }
+
+  input{
+    width:100%;
+    margin-bottom:10px;
+  }
+
+  form button{
+    width:100%;
+    margin-left:0;
+  }
 }

@@ -3,26 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Luxury Bag Store</title>
+  <title>Luxury Collection Shop</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
 <header>
-  <div class="logo">LUXE BAGS</div>
+  <div class="logo">Luxury Collection Shop</div>
+
   <nav>
     <a href="#home">Home</a>
-    <a href="#products">Products</a>
+    <a href="#products">Bags</a>
     <a href="#about">About</a>
+    <a href="#reviews">Reviews</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <section class="hero" id="home">
-  <div class="hero-content">
-    <h1>Luxury Bags Collection</h1>
-    <p>Elegant fashion pieces inspired by timeless luxury.</p>
-    <a href="#products" class="btn">Shop Now</a>
+  <div class="overlay">
+    <h1>Luxury Coach Bag Collection</h1>
+    <p>Premium luxury-inspired handbags for fashion lovers worldwide.</p>
+    <a href="#products" class="btn">Shop Collection</a>
   </div>
 </section>
 
@@ -32,45 +34,89 @@
   <div class="product-grid">
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=800&auto=format&fit=crop" alt="Bag"/>
-      <h3>Classic Black Tote</h3>
-      <p>$120</p>
-      <button>Buy Now</button>
+      <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1200&auto=format&fit=crop" alt="">
+      <h3>Coach Black Soho Bag</h3>
+      <p>$145</p>
+      <button onclick="buyNow('Coach Black Soho Bag')">Buy Now</button>
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?q=80&w=800&auto=format&fit=crop" alt="Bag"/>
-      <h3>Luxury Gold Handbag</h3>
-      <p>$150</p>
-      <button>Buy Now</button>
+      <img src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?q=80&w=1200&auto=format&fit=crop" alt="">
+      <h3>Coach Gold Kisslock</h3>
+      <p>$170</p>
+      <button onclick="buyNow('Coach Gold Kisslock')">Buy Now</button>
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop" alt="Bag"/>
-      <h3>Modern Fashion Bag</h3>
-      <p>$180</p>
-      <button>Buy Now</button>
+      <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?q=80&w=1200&auto=format&fit=crop" alt="">
+      <h3>Coach Rowan Pink</h3>
+      <p>$160</p>
+      <button onclick="buyNow('Coach Rowan Pink')">Buy Now</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=1200&auto=format&fit=crop" alt="">
+      <h3>Luxury Signature Tote</h3>
+      <p>$190</p>
+      <button onclick="buyNow('Luxury Signature Tote')">Buy Now</button>
     </div>
 
   </div>
 </section>
 
 <section class="about" id="about">
-  <h2>About Us</h2>
+  <h2>About Luxury Collection Shop</h2>
   <p>
-    We provide stylish luxury-inspired bags with premium designs for fashion lovers worldwide.
+    Luxury Collection Shop provides elegant premium handbags inspired by timeless luxury fashion. 
+    We focus on style, elegance, and customer satisfaction worldwide.
   </p>
 </section>
 
+<section class="reviews" id="reviews">
+  <h2>Customer Reviews</h2>
+
+  <div class="review-box">
+    <p>"Absolutely beautiful bags and amazing quality!"</p>
+    <span>- Sophia M.</span>
+  </div>
+
+  <div class="review-box">
+    <p>"Shipping was fast and the bag looked stunning."</p>
+    <span>- Jessica T.</span>
+  </div>
+
+  <div class="review-box">
+    <p>"Luxury vibes without the crazy price."</p>
+    <span>- Amanda L.</span>
+  </div>
+
+</section>
+
+<section class="newsletter">
+  <h2>Join Our VIP List</h2>
+  <p>Get updates on new arrivals and special offers.</p>
+
+  <form>
+    <input type="email" placeholder="Enter your email">
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
 <section class="contact" id="contact">
-  <h2>Contact</h2>
-  <p>Email: support@luxebags.com</p>
-  <p>Instagram: @luxebags</p>
+  <h2>Contact Us</h2>
+
+  <div class="contact-box">
+    <p>Email: support@luxurycollectionshop.com</p>
+    <p>Instagram: @luxurycollectionshop</p>
+    <p>TikTok: @luxurycollectionshop</p>
+  </div>
 </section>
 
 <footer>
-  <p>© 2026 Luxe Bags. All rights reserved.</p>
+  <p>© 2026 Luxury Collection Shop. All Rights Reserved.</p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
